@@ -1,7 +1,33 @@
 .App {
   text-align: center;
+  width: 500px;
+  margin: 10px auto;
+  border: 1px solid #ccc;
+  
 }
-
+.App .header{
+  display: flex;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+.App .header input{
+ border: 0;
+ width: 100%;
+ padding-left: 10px;
+ font-size: 20px;
+ font-weight: 100;
+ color: black;
+}
+.App .header input:focus{
+  outline: none;
+}
+.App .header img{
+ margin: 0;
+ padding: 0;
+}
+.App .header img:nth-of-type(2){
+  margin-left: 5px;
+}
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 40vmin;
@@ -18,7 +44,6 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
 .App-link {
   color: #61dafb;
 }
