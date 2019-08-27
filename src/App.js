@@ -10,10 +10,10 @@ class App extends React.Component {
     super(props);
     this.state = {
       TodoItems: [
-        { title: "Hom nay troi dep qua", isStatus: false },
-        { title: "Hom nay troi dep qua", isStatus: true },
-        { title: "Hom nay troi dep qua", isStatus: true },
-        { title: "Hom nay troi dep qua", isStatus: true }
+        { title: "Hom nay troi dep qua 1", isStatus: false },
+        { title: "Hom nay troi dep qua 2", isStatus: true },
+        { title: "Hom nay troi dep qua 3", isStatus: true },
+        { title: "Hom nay troi dep qua 4", isStatus: true }
       ]
     }
     this.ClearALL = this.ClearALL.bind(this);
@@ -97,14 +97,15 @@ class App extends React.Component {
     // delete item
     
     removeItem = (item)=>{
-      // if(confirm('Ban co muon xoa khong?')===true){
         return (event) =>{
+          if(item.isStatus === true){
           this.setState({
             TodoItems: this.state.TodoItems.filter(i => i !== item)  
         })
-      // }
-        };
-  }
+      }
+    };
+        }
+  
   render() {
     const { TodoItems } = this.state;
     return (
