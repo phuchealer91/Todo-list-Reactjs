@@ -95,10 +95,9 @@ class App extends React.Component {
       })
     }
     // delete item
-    
     removeItem = (item)=>{
         return (event) =>{
-          if(item.isStatus === true){
+          if(item.isStatus === true && window.confirm('Ban co chac xoa khong?')){
           this.setState({
             TodoItems: this.state.TodoItems.filter(i => i !== item)  
         })
